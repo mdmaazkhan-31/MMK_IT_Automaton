@@ -3,40 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IT Submit Form</title>
+    <title>HCLTech | IT Submit Portal</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 20px 15px; background-color: #f4f4f4; }
-        .container { background: white; padding: 25px 20px; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); max-width: 400px; margin: auto; }
-        h2 { color: #333; margin-top: 0; }
-        p { color: #555; font-size: 15px; line-height: 1.4; margin-bottom: 20px; }
-        .btn { display: block; margin: 10px auto; padding: 14px 15px; text-decoration: none; border-radius: 6px; font-weight: bold; width: 95%; box-sizing: border-box; }
-        .btn-android { background-color: #3DDC84; color: #000; border: 1px solid #2bb56a; }
-        .btn-apple { background-color: #000000; color: white; border: 1px solid #333; }
-        .btn-web { background-color: #0078D4; color: white; border: 1px solid #005a9e; }
-        .btn-secondary { background-color: #e1dfdd; color: #333; border: 1px solid #ccc; font-size: 14px; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: center; padding: 20px 10px; background-color: #f0f2f5; color: #333; }
+        .container { background: white; padding: 25px 20px; border-radius: 12px; box-shadow: 0px 4px 20px rgba(0,0,0,0.08); max-width: 450px; margin: auto; }
+        h2 { color: #0078D4; margin-top: 0; font-size: 22px; border-bottom: 2px solid #0078D4; padding-bottom: 10px; }
+        p { color: #666; font-size: 14px; line-height: 1.5; margin-bottom: 20px; }
+        
+        /* Button Styles */
+        .btn { display: block; margin: 10px auto; padding: 14px; text-decoration: none; border-radius: 6px; font-weight: bold; width: 100%; box-sizing: border-box; cursor: pointer; border: none; font-size: 15px; transition: opacity 0.2s; }
+        .btn:active { opacity: 0.8; }
+        .btn-android { background-color: #3DDC84; color: #000; }
+        .btn-apple { background-color: #000; color: white; }
+        .btn-web { background-color: #0078D4; color: white; }
+        .btn-secondary { background-color: #edebe9; color: #333; font-size: 13px; }
+
+        /* Template Section Styles */
+        .template-box { margin-top: 30px; text-align: left; background: #faf9f8; border: 1px solid #edebe9; border-radius: 8px; padding: 15px; }
+        .template-header { font-weight: bold; font-size: 13px; color: #0078D4; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; }
+        .field-label { font-weight: bold; font-size: 12px; color: #666; margin-top: 10px; display: block; }
+        .field-value { background: white; border: 1px solid #ddd; padding: 8px; border-radius: 4px; font-size: 13px; margin-top: 4px; word-break: break-all; position: relative; display: block; }
+        .copy-link { font-size: 11px; color: #0078D4; font-weight: bold; cursor: pointer; float: right; text-transform: uppercase; }
+        .body-text { white-space: pre-wrap; font-family: monospace; font-size: 12px; }
     </style>
+    <script>
+        function copyText(id, label) {
+            var text = document.getElementById(id).innerText;
+            navigator.clipboard.writeText(text).then(function() {
+                alert(label + " copied to clipboard!");
+            });
+        }
+    </script>
 </head>
 <body>
-    <div class="container">
-        <h2>IT Submit Form</h2>
-        <p>Select your device type to draft the email:</p>
+
+<div class="container">
+    <h2>IT Submit Portal</h2>
+    <p>Use the buttons below to instantly draft your submission email in Outlook.</p>
+    
+    <a class="btn btn-android" href="intent:N4Engineers.Corporate@hcltech.com,dponoidasez@hcltech.com?cc=Rajeev.dutt@hcltech.com&subject=IT%20Submit%20%7C%20%3C%3CReason%3E%3E%20%7C%20%3C%3CHostname%3E%3E&body=Hi%20Team,%0A%0AI%20am%20submitting%20my%20system%20having%20hostname%20as%20%22%3C%3CHostname%3E%3E%22%20with/without%20charger%20and%20with/without%20Lan%20Connector.%20No%20data%20backup%20is%20required.%0A%0ADetails:%0AName:%20%0AEmployee%20Code:%20%0AModel:%20%0ASerial%20Number:%20%0AReason:%20%0A%0ARegards,#Intent;scheme=mailto;package=com.microsoft.office.outlook;end;">📱 Open Outlook (Android)</a>
+    
+    <a class="btn btn-apple" href="ms-outlook://compose?to=N4Engineers.Corporate@hcltech.com,dponoidasez@hcltech.com&cc=Rajeev.dutt@hcltech.com&subject=IT%20Submit%20%7C%20%3C%3CReason%3E%3E%20%7C%20%3C%3CHostname%3E%3E&body=Hi%20Team,%0A%0AI%20am%20submitting%20my%20system%20having%20hostname%20as%20%22%3C%3CHostname%3E%3E%22%20with/without%20charger%20and%20with/without%20Lan%20Connector.%20No%20data%20backup%20is%20required.%0A%0ADetails:%0AName:%20%0AEmployee%20Code:%20%0AModel:%20%0ASerial%20Number:%20%0AReason:%20%0A%0ARegards,">🍏 / 💻 Open Outlook (iPhone/PC)</a>
+    
+    <a class="btn btn-web" href="https://outlook.office.com/mail/" target="_blank">🌐 Continue in Outlook Web</a>
+    
+    <a class="btn btn-secondary" href="mailto:N4Engineers.Corporate@hcltech.com,dponoidasez@hcltech.com?cc=Rajeev.dutt@hcltech.com&subject=IT%20Submit%20%7C%20%3C%3CReason%3E%3E%20%7C%20%3C%3CHostname%3E%3E&body=Hi%20Team,%0A%0AI%20am%20submitting%20my%20system%20having%20hostname%20as%20%22%3C%3CHostname%3E%3E%22%20with/without%20charger%20and%20with/without%20Lan%20Connector.%20No%20data%20backup%20is%20required.%0A%0ADetails:%0AName:%20%0AEmployee%20Code:%20%0AModel:%20%0ASerial%20Number:%20%0AReason:%20%0A%0ARegards,">Fallback: Use Default App</a>
+
+    <div class="template-box">
+        <div class="template-header">Manual Copy Template</div>
+        <p style="font-size: 12px; margin-bottom: 10px;">If the buttons don't work, copy these fields manually:</p>
         
-        <a class="btn btn-android" href="intent:N4Engineers.Corporate@hcltech.com,dponoidasez@hcltech.com?cc=Rajeev.dutt@hcltech.com&subject=IT%20Submit%20%7C%20%3C%3CReason%3E%3E%20%7C%20%3C%3CHostname%3E%3E&body=Hi%20Team,%0A%0AI%20am%20submitting%20my%20system%20having%20hostname%20as%20%22%3C%3CHostname%3E%3E%22%20with/without%20charger%20and%20with/without%20Lan%20Connector.%20No%20data%20backup%20is%20required.%0A%0ADetails:%0AName:%20%0AEmployee%20Code:%20%0AModel:%20%0ASerial%20Number:%20%0AReason:%20%0A%0ARegards,#Intent;scheme=mailto;package=com.microsoft.office.outlook;end;">
-            📱 Open Outlook (Android)
-        </a>
-
-        <a class="btn btn-apple" href="ms-outlook://compose?to=N4Engineers.Corporate@hcltech.com,dponoidasez@hcltech.com&cc=Rajeev.dutt@hcltech.com&subject=IT%20Submit%20%7C%20%3C%3CReason%3E%3E%20%7C%20%3C%3CHostname%3E%3E&body=Hi%20Team,%0A%0AI%20am%20submitting%20my%20system%20having%20hostname%20as%20%22%3C%3CHostname%3E%3E%22%20with/without%20charger%20and%20with/without%20Lan%20Connector.%20No%20data%20backup%20is%20required.%0A%0ADetails:%0AName:%20%0AEmployee%20Code:%20%0AModel:%20%0ASerial%20Number:%20%0AReason:%20%0A%0ARegards,">
-            🍏 / 💻 Open Outlook (iPhone/PC)
-        </a>
-
-        <a class="btn btn-web" target="_blank" href="https://outlook.office.com/mail/deeplink/compose?to=N4Engineers.Corporate@hcltech.com,dponoidasez@hcltech.com&cc=Rajeev.dutt@hcltech.com&subject=IT%20Submit%20%7C%20%3C%3CReason%3E%3E%20%7C%20%3C%3CHostname%3E%3E&body=Hi%20Team,%0A%0AI%20am%20submitting%20my%20system%20having%20hostname%20as%20%22%3C%3CHostname%3E%3E%22%20with/without%20charger%20and%20with/without%20Lan%20Connector.%20No%20data%20backup%20is%20required.%0A%0ADetails:%0AName:%20%0AEmployee%20Code:%20%0AModel:%20%0ASerial%20Number:%20%0AReason:%20%0A%0ARegards,">
-            🌐 Continue in Outlook Web
-        </a>
-
-        <a class="btn btn-secondary" href="mailto:N4Engineers.Corporate@hcltech.com,dponoidasez@hcltech.com?cc=Rajeev.dutt@hcltech.com&subject=IT%20Submit%20%7C%20%3C%3CReason%3E%3E%20%7C%20%3C%3CHostname%3E%3E&body=Hi%20Team,%0A%0AI%20am%20submitting%20my%20system%20having%20hostname%20as%20%22%3C%3CHostname%3E%3E%22%20with/without%20charger%20and%20with/without%20Lan%20Connector.%20No%20data%20backup%20is%20required.%0A%0ADetails:%0AName:%20%0AEmployee%20Code:%20%0AModel:%20%0ASerial%20Number:%20%0AReason:%20%0A%0ARegards,">
-            Fallback: Use Default Mail App
-        </a>
+        <span class="field-label">TO:</span>
+        <div class="field-value"><span id="copy-to">N4Engineers.Corporate@hcltech.com, dponoidasez@hcltech.com</span> <span class="copy-link" onclick="copyText('copy-to', 'Recipients')">Copy</span></div>
         
+        <span class="field-label">CC:</span>
+        <div class="field-value"><span id="copy-cc">Rajeev.dutt@hcltech.com</span> <span class="copy-link" onclick="copyText('copy-cc', 'CC Email')">Copy</span></div>
+        
+        <span class="field-label">SUBJECT:</span>
+        <div class="field-value"><span id="copy-sub">IT Submit | &lt;&lt;Reason&gt;&gt; | &lt;&lt;Hostname&gt;&gt;</span> <span class="copy-link" onclick="copyText('copy-sub', 'Subject')">Copy</span></div>
+        
+        <span class="field-label">MESSAGE MATTER:</span>
+        <div class="field-value">
+            <span class="copy-link" onclick="copyText('copy-body', 'Email Matter')">Copy Matter</span>
+            <div id="copy-body" class="body-text">Hi Team,
+ 
+I am submitting my system having hostname as “<<Hostname>>” with/without charger and with/without Lan Connector. No data backup is required.
+ 
+Details:
+Name: 
+Employee Code: 
+Model: 
+Serial Number: 
+Reason: 
+ 
+Regards,</div>
+        </div>
     </div>
+</div>
+
 </body>
 </html>
