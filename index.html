@@ -5,32 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IT Submit Form</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 25px 15px; background-color: #f4f4f4; }
-        .container { background: white; padding: 25px 20px; border-radius: 12px; box-shadow: 0px 4px 15px rgba(0,0,0,0.1); max-width: 400px; margin: auto; }
-        h2 { color: #333; margin-top: 0; margin-bottom: 10px;}
-        p { color: #555; font-size: 14px; line-height: 1.4; margin-bottom: 20px; }
-        .btn { display: block; margin: 12px auto; padding: 14px 15px; text-decoration: none; border-radius: 8px; font-weight: bold; width: 95%; box-sizing: border-box; transition: 0.2s; }
-        
-        /* Button Colors */
+        body { font-family: Arial, sans-serif; text-align: center; padding: 20px 15px; background-color: #f4f4f4; }
+        .container { background: white; padding: 25px 20px; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); max-width: 400px; margin: auto; }
+        h2 { color: #333; margin-top: 0; }
+        p { color: #555; font-size: 15px; line-height: 1.4; margin-bottom: 20px; }
+        .btn { display: block; margin: 10px auto; padding: 14px 15px; text-decoration: none; border-radius: 6px; font-weight: bold; width: 95%; box-sizing: border-box; }
         .btn-android { background-color: #3DDC84; color: #000; border: 1px solid #2bb56a; }
         .btn-apple { background-color: #000000; color: white; border: 1px solid #333; }
         .btn-web { background-color: #0078D4; color: white; border: 1px solid #005a9e; }
         .btn-secondary { background-color: #e1dfdd; color: #333; border: 1px solid #ccc; font-size: 14px; }
-        
-        .note { font-size: 12px; color: #888; margin-top: 20px; }
     </style>
 </head>
 <body>
     <div class="container">
         <h2>IT Submit Form</h2>
-        <p>Select how you would like to draft your email:</p>
+        <p>Select your device type to draft the email:</p>
         
         <a class="btn btn-android" href="intent:N4Engineers.Corporate@hcltech.com,dponoidasez@hcltech.com?cc=Rajeev.dutt@hcltech.com&subject=IT%20Submit%20%7C%20%3C%3CReason%3E%3E%20%7C%20%3C%3CHostname%3E%3E&body=Hi%20Team,%0A%0AI%20am%20submitting%20my%20system%20having%20hostname%20as%20%22%3C%3CHostname%3E%3E%22%20with/without%20charger%20and%20with/without%20Lan%20Connector.%20No%20data%20backup%20is%20required.%0A%0ADetails:%0AName:%20%0AEmployee%20Code:%20%0AModel:%20%0ASerial%20Number:%20%0AReason:%20%0A%0ARegards,#Intent;scheme=mailto;package=com.microsoft.office.outlook;end;">
-            📱 Open Outlook App (Android)
+            📱 Open Outlook (Android)
         </a>
 
         <a class="btn btn-apple" href="ms-outlook://compose?to=N4Engineers.Corporate@hcltech.com,dponoidasez@hcltech.com&cc=Rajeev.dutt@hcltech.com&subject=IT%20Submit%20%7C%20%3C%3CReason%3E%3E%20%7C%20%3C%3CHostname%3E%3E&body=Hi%20Team,%0A%0AI%20am%20submitting%20my%20system%20having%20hostname%20as%20%22%3C%3CHostname%3E%3E%22%20with/without%20charger%20and%20with/without%20Lan%20Connector.%20No%20data%20backup%20is%20required.%0A%0ADetails:%0AName:%20%0AEmployee%20Code:%20%0AModel:%20%0ASerial%20Number:%20%0AReason:%20%0A%0ARegards,">
-            🍏 Open Outlook App (iPhone/PC)
+            🍏 / 💻 Open Outlook (iPhone/PC)
         </a>
 
         <a class="btn btn-web" target="_blank" href="https://outlook.office.com/mail/deeplink/compose?to=N4Engineers.Corporate@hcltech.com,dponoidasez@hcltech.com&cc=Rajeev.dutt@hcltech.com&subject=IT%20Submit%20%7C%20%3C%3CReason%3E%3E%20%7C%20%3C%3CHostname%3E%3E&body=Hi%20Team,%0A%0AI%20am%20submitting%20my%20system%20having%20hostname%20as%20%22%3C%3CHostname%3E%3E%22%20with/without%20charger%20and%20with/without%20Lan%20Connector.%20No%20data%20backup%20is%20required.%0A%0ADetails:%0AName:%20%0AEmployee%20Code:%20%0AModel:%20%0ASerial%20Number:%20%0AReason:%20%0A%0ARegards,">
@@ -38,10 +34,9 @@
         </a>
 
         <a class="btn btn-secondary" href="mailto:N4Engineers.Corporate@hcltech.com,dponoidasez@hcltech.com?cc=Rajeev.dutt@hcltech.com&subject=IT%20Submit%20%7C%20%3C%3CReason%3E%3E%20%7C%20%3C%3CHostname%3E%3E&body=Hi%20Team,%0A%0AI%20am%20submitting%20my%20system%20having%20hostname%20as%20%22%3C%3CHostname%3E%3E%22%20with/without%20charger%20and%20with/without%20Lan%20Connector.%20No%20data%20backup%20is%20required.%0A%0ADetails:%0AName:%20%0AEmployee%20Code:%20%0AModel:%20%0ASerial%20Number:%20%0AReason:%20%0A%0ARegards,">
-            Use Default Mail App Instead
+            Fallback: Use Default Mail App
         </a>
         
-        <p class="note">Note: Outlook Web will require you to log in with your HCLTech credentials first.</p>
     </div>
 </body>
 </html>
