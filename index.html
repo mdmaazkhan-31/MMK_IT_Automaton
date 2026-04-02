@@ -3,38 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Opening IT Submit Form...</title>
-    <script>
-        // This instantly tries to open the Outlook mobile app
-        window.onload = function() {
-            window.location.href = "ms-outlook://compose?to=N4Engineers.Corporate@hcltech.com,dponoidasez@hcltech.com&cc=Rajeev.dutt@hcltech.com&subject=IT%20Submit%20%7C%20%3C%3CReason%3E%3E%20%7C%20%3C%3CHostname%3E%3E&body=Hi%20Team,%0A%0AI%20am%20submitting%20my%20system%20having%20hostname%20as%20%22%3C%3CHostname%3E%3E%22%20with/without%20charger%20and%20with/without%20Lan%20Connector.%20No%20data%20backup%20is%20required.%0A%0ADetails:%0AName:%20%0AEmployee%20Code:%20%0AModel:%20%0ASerial%20Number:%20%0AReason:%20%0A%0ARegards,";
-        };
-    </script>
+    <title>IT Submit Form</title>
     <style>
         body { font-family: Arial, sans-serif; text-align: center; padding: 30px 15px; background-color: #f4f4f4; }
         .container { background: white; padding: 30px 20px; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); max-width: 400px; margin: auto; }
         h2 { color: #333; margin-top: 0; }
-        p { color: #555; font-size: 15px; line-height: 1.4; }
-        .btn { display: block; margin: 15px auto; padding: 14px 20px; text-decoration: none; border-radius: 6px; font-weight: bold; width: 85%; box-sizing: border-box; }
-        .btn-primary { background-color: #0078D4; color: white; }
-        .btn-secondary { background-color: #e1dfdd; color: #333; }
-        .note { color: #888; font-size: 13px; margin-top: 25px; }
+        p { color: #555; font-size: 15px; line-height: 1.4; margin-bottom: 25px; }
+        .btn { display: block; margin: 12px auto; padding: 14px 15px; text-decoration: none; border-radius: 6px; font-weight: bold; width: 95%; box-sizing: border-box; }
+        .btn-android { background-color: #3DDC84; color: #000; border: 1px solid #2bb56a; }
+        .btn-apple { background-color: #000000; color: white; border: 1px solid #333; }
+        .btn-secondary { background-color: #e1dfdd; color: #333; border: 1px solid #ccc; font-size: 14px; }
     </style>
 </head>
 <body>
     <div class="container">
-        <h2>Opening Outlook...</h2>
-        <p>If you have the Outlook mobile app installed, your draft should open automatically.</p>
+        <h2>IT Submit Form</h2>
+        <p>Select your device type to draft the email:</p>
         
-        <hr style="margin: 25px 0; border: 0; border-top: 1px solid #eee;">
-        
-        <p><strong>App didn't open?</strong><br>Choose an option below to submit your request:</p>
-        
-        <a class="btn btn-primary" href="https://outlook.office.com/mail/deeplink/compose?to=N4Engineers.Corporate@hcltech.com,dponoidasez@hcltech.com&cc=Rajeev.dutt@hcltech.com&subject=IT%20Submit%20%7C%20%3C%3CReason%3E%3E%20%7C%20%3C%3CHostname%3E%3E&body=Hi%20Team,%0A%0AI%20am%20submitting%20my%20system%20having%20hostname%20as%20%22%3C%3CHostname%3E%3E%22%20with/without%20charger%20and%20with/without%20Lan%20Connector.%20No%20data%20backup%20is%20required.%0A%0ADetails:%0AName:%20%0AEmployee%20Code:%20%0AModel:%20%0ASerial%20Number:%20%0AReason:%20%0A%0ARegards,">Continue in Outlook Web</a>
+        <a class="btn btn-android" href="intent:N4Engineers.Corporate@hcltech.com,dponoidasez@hcltech.com?cc=Rajeev.dutt@hcltech.com&subject=IT%20Submit%20%7C%20%3C%3CReason%3E%3E%20%7C%20%3C%3CHostname%3E%3E&body=Hi%20Team,%0A%0AI%20am%20submitting%20my%20system%20having%20hostname%20as%20%22%3C%3CHostname%3E%3E%22%20with/without%20charger%20and%20with/without%20Lan%20Connector.%20No%20data%20backup%20is%20required.%0A%0ADetails:%0AName:%20%0AEmployee%20Code:%20%0AModel:%20%0ASerial%20Number:%20%0AReason:%20%0A%0ARegards,#Intent;scheme=mailto;package=com.microsoft.office.outlook;end;">
+            📱 Open Outlook (Android)
+        </a>
 
-        <a class="btn btn-secondary" href="mailto:N4Engineers.Corporate@hcltech.com,dponoidasez@hcltech.com?cc=Rajeev.dutt@hcltech.com&subject=IT%20Submit%20%7C%20%3C%3CReason%3E%3E%20%7C%20%3C%3CHostname%3E%3E&body=Hi%20Team,%0A%0AI%20am%20submitting%20my%20system%20having%20hostname%20as%20%22%3C%3CHostname%3E%3E%22%20with/without%20charger%20and%20with/without%20Lan%20Connector.%20No%20data%20backup%20is%20required.%0A%0ADetails:%0AName:%20%0AEmployee%20Code:%20%0AModel:%20%0ASerial%20Number:%20%0AReason:%20%0A%0ARegards,">Use Default Mail App</a>
+        <a class="btn btn-apple" href="ms-outlook://compose?to=N4Engineers.Corporate@hcltech.com,dponoidasez@hcltech.com&cc=Rajeev.dutt@hcltech.com&subject=IT%20Submit%20%7C%20%3C%3CReason%3E%3E%20%7C%20%3C%3CHostname%3E%3E&body=Hi%20Team,%0A%0AI%20am%20submitting%20my%20system%20having%20hostname%20as%20%22%3C%3CHostname%3E%3E%22%20with/without%20charger%20and%20with/without%20Lan%20Connector.%20No%20data%20backup%20is%20required.%0A%0ADetails:%0AName:%20%0AEmployee%20Code:%20%0AModel:%20%0ASerial%20Number:%20%0AReason:%20%0A%0ARegards,">
+            💻 / 🍏 Open Outlook (iPhone/PC)
+        </a>
+
+        <a class="btn btn-secondary" href="mailto:N4Engineers.Corporate@hcltech.com,dponoidasez@hcltech.com?cc=Rajeev.dutt@hcltech.com&subject=IT%20Submit%20%7C%20%3C%3CReason%3E%3E%20%7C%20%3C%3CHostname%3E%3E&body=Hi%20Team,%0A%0AI%20am%20submitting%20my%20system%20having%20hostname%20as%20%22%3C%3CHostname%3E%3E%22%20with/without%20charger%20and%20with/without%20Lan%20Connector.%20No%20data%20backup%20is%20required.%0A%0ADetails:%0AName:%20%0AEmployee%20Code:%20%0AModel:%20%0ASerial%20Number:%20%0AReason:%20%0A%0ARegards,">
+            Fallback: Use Default Mail App
+        </a>
         
-        <p class="note">Outlook Web will require you to sign in with your company credentials.</p>
     </div>
 </body>
 </html>
